@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-23T15:24:24 IST" name="SeleniumGridDocker" finished-at="2023-05-23T15:25:01 IST" duration-ms="37189">
+    <groups>
+      <group name="cucumber">
+        <method signature="CustomAbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper,org.testng.ITestContext)[pri:0, instance:com.resumelibrary.cucumber.CucumberTestRunner@6ae5aa72]" name="runScenario" class="com.resumelibrary.cucumber.CustomAbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-05-23T15:24:24 IST" name="Chrome Test1" finished-at="2023-05-23T15:25:01 IST" duration-ms="37189">
+      <class name="com.resumelibrary.cucumber.CucumberTestRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.resumelibrary.cucumber.CucumberTestRunner@6ae5aa72]" started-at="2023-05-23T15:24:24 IST" name="setUpClass" finished-at="2023-05-23T15:24:25 IST" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.resumelibrary.cucumber.CucumberTestRunner@6ae5aa72]" started-at="2023-05-23T15:24:25 IST" name="setUpClass" finished-at="2023-05-23T15:24:25 IST" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@cb7fa71]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper,org.testng.ITestContext)[pri:0, instance:com.resumelibrary.cucumber.CucumberTestRunner@6ae5aa72]" started-at="2023-05-23T15:24:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-23T15:25:01 IST" duration-ms="36351" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully Login as an existing Client"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Client Login Login"]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@cb7fa71]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.resumelibrary.cucumber.CucumberTestRunner@6ae5aa72]" started-at="2023-05-23T15:25:01 IST" name="tearDownClass" finished-at="2023-05-23T15:25:01 IST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.resumelibrary.cucumber.CucumberTestRunner -->
+    </test> <!-- Chrome Test1 -->
+  </suite> <!-- SeleniumGridDocker -->
+</testng-results>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="rl_selenium_tests" />
+        <module name="CVL-WEB-REPO-master2_BasicRunner" />
+        <module name="CVL-WEB-REPO-master2_baseline" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

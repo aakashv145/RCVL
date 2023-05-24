@@ -1,0 +1,2822 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>May 19, 2023 06:31:24 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@resetClientPasswordLink</a></li>
+					<li><a href='#'>@Regression</a></li>
+					<li><a href='#'>@rejectClientLoginInvalid</a></li>
+					<li><a href='#'>@toggleCandidateLoginIcon</a></li>
+					<li><a href='#'>@ReleaseRegression2</a></li>
+					<li><a href='#'>@ClientLogin</a></li>
+					<li><a href='#'>@Web</a></li>
+					<li><a href='#'>@Recruiters</a></li>
+					<li><a href='#'>@WeAreTestingParallel</a></li>
+					<li><a href='#'>@ClientE2E</a></li>
+					<li><a href='#'>@clientSuccessfulLogin</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='95%'>
+                    <span class='strong'>23</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='4%'>
+                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='95%'>
+                    <span class='strong'>116</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    2</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2%'>
+                    3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Client Login Login</span>
+						<span class='test-time'>May 19, 2023 06:31:26 pm</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 02 50.259</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='17' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='21' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='36' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='47' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='63' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='4' status='pass'>
+
+	<span class='duration right label'>00 02 08.015</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='13' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I login as a client</div>
+
+
+		</li>
+		<li test-id='27' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+		</li>
+		<li test-id='33' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Resume library"</div>
+
+
+		</li>
+		<li test-id='51' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Job Postings"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='6' status='pass'>
+
+	<span class='duration right label'>00 01 44.972</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='8' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='14' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='20' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='29' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='9' status='pass'>
+
+	<span class='duration right label'>00 01 45.571</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='16' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='22' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='28' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='34' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='11' status='pass'>
+
+	<span class='duration right label'>00 01 32.132</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='15' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I login as a client</div>
+
+
+		</li>
+		<li test-id='26' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+		</li>
+		<li test-id='39' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Resume library"</div>
+
+
+		</li>
+		<li test-id='49' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Job Postings"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='18' status='pass'>
+
+	<span class='duration right label'>00 02 09.893</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='23' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='25' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='32' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='45' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='54' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='72' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='24' status='pass'>
+
+	<span class='duration right label'>00 06 31.987</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='50' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='67' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='80' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='102' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='107' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='121' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='131' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='30' status='pass'>
+
+	<span class='duration right label'>00 01 39.053</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='38' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I login as a client</div>
+
+
+		</li>
+		<li test-id='53' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+		</li>
+		<li test-id='66' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Resume library"</div>
+
+
+		</li>
+		<li test-id='68' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Job Postings"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='40' status='pass'>
+
+	<span class='duration right label'>00 01 45.609</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='42' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='52' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='61' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='73' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='87' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='43' status='pass'>
+
+	<span class='duration right label'>00 05 48.540</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='46' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='62' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='71' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='83' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='100' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='122' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='130' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='57' status='pass'>
+
+	<span class='duration right label'>00 01 16.251</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='60' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='70' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='79' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='89' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='94' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='64' status='pass'>
+
+	<span class='duration right label'>00 01 05.882</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='69' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='78' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='88' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='95' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='105' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='75' status='pass'>
+
+	<span class='duration right label'>00 05 33.677</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='77' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='99' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='124' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='140' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='155' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='170' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='173' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='81' status='pass'>
+
+	<span class='duration right label'>00 01 07.498</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='84' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='93' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='104' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='109' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='90' status='pass'>
+
+	<span class='duration right label'>00 04 49.743</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='92' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='103' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='126' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='134' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='96' status='pass'>
+
+	<span class='duration right label'>00 04 34.068</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='98' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I login as a client</div>
+
+
+		</li>
+		<li test-id='120' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+		</li>
+		<li test-id='132' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Resume library"</div>
+
+
+		</li>
+		<li test-id='133' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Job Postings"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='110' status='pass'>
+
+	<span class='duration right label'>00 04 40.737</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='125' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I login as a client</div>
+
+
+		</li>
+		<li test-id='146' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+		</li>
+		<li test-id='154' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Resume library"</div>
+
+
+		</li>
+		<li test-id='161' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Job Postings"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='113' status='pass'>
+
+	<span class='duration right label'>00 04 35.131</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='115' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='119' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='128' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='143' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='153' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='116' status='pass'>
+
+	<span class='duration right label'>00 04 21.953</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='118' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='129' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='145' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='156' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='123' status='fail'>
+
+	<span class='duration right label'>00 03 54.541</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Successfully Login as an existing Client</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@ClientE2E</span>
+				<span class='category label'>@clientSuccessfulLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='135' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I login as a client</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, get {url=https://www-master.ci.resume-library.com/hiring/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50932}, goog:loggingPrefs: {browser: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, performance: false, platformName: WINDOWS, proxy: Proxy(), se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, video: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at com.resumelibrary.utilities.Utility.getDriverWithUrl(Utility.java:46)
+	at com.resumelibrary.utilities.Utility.loadWebUrl(Utility.java:67)
+	at com.resumelibrary.webtest.misc.MiscPage.loginAsClient(MiscPage.java:306)
+	at com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient(Misc.java:93)
+	at ✽.I login as a client(file:///Users/surendran/Downloads/CVL-WEB-REPO-master2_baseline/./src/test/java/resources/featurefiles/web/client/login/Login.feature:171)
+</textarea>
+		</li>
+		<li test-id='157' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I should be able to see in browser URL "Client Account"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='158' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see text "Resume library"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='159' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I should see text "Job Postings"</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='164' class='node * Fail' status='Fail'>
+			<div class="step-name" title="(AFTER)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>com.resumelibrary.cucumber.Hooks.tearDown(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">[--->--------------------------------------------<---]</div>
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50932}, goog:loggingPrefs: {browser: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, performance: false, platformName: WINDOWS, proxy: Proxy(), se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, video: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:322)
+	at com.resumelibrary.utilities.Utility.getPresentURL(Utility.java:210)
+	at com.resumelibrary.cucumber.Hooks.tearDown(Hooks.java:37)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='136' status='pass'>
+
+	<span class='duration right label'>00 01 27.729</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='144' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='152' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='172' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='178' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='180' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='184' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='186' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='147' status='pass'>
+
+	<span class='duration right label'>00 01 11.359</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset Client Password link</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@resetClientPasswordLink</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@ReleaseRegression2</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='151' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='171' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Forgot password?"</div>
+
+
+		</li>
+		<li test-id='175' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.FastTrackRegister.iShouldSee(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see "Enter your email address below and we will send you an email to reset your password."</div>
+
+
+		</li>
+		<li test-id='182' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iEnterClientEmailAddressToResetPassword())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter client email address to reset password</div>
+
+
+		</li>
+		<li test-id='183' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Reset Password"</div>
+
+
+		</li>
+		<li test-id='189' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "User Reset Password"</div>
+
+
+		</li>
+		<li test-id='191' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldSeeTextPTagAndVerifyMessage(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text p tag "We've sent your password reset link to" and verify message "We've sent your password reset link to testers+client@resume-library.com."</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='149' status='pass'>
+
+	<span class='duration right label'>00 00 39.649</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reject Client Login with invalid credentials</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@rejectClientLoginInvalid</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='163' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='169' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Login as Employer"</div>
+
+
+		</li>
+		<li test-id='174' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see text "Email is required"</div>
+
+
+		</li>
+		<li test-id='176' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Password is required"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='166' status='pass'>
+
+	<span class='duration right label'>00 00 34.937</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: toggle the candidate login icon</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Web</span>
+				<span class='category label'>@Recruiters</span>
+				<span class='category label'>@WeAreTestingParallel</span>
+				<span class='category label'>@ClientLogin</span>
+				<span class='category label'>@Regression</span>
+				<span class='category label'>@toggleCandidateLoginIcon</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='168' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iNavigateToPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I navigate to page "Hiring Login"</div>
+
+
+		</li>
+		<li test-id='181' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iClickOn(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click on "Jobseeker login"</div>
+
+
+		</li>
+		<li test-id='185' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.candidate.Others.iShouldBeAbleToSeeInBrowserURL(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be able to see in browser URL "Login"</div>
+
+
+		</li>
+		<li test-id='187' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.client.ManageUsers.iShouldSeeButton(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see button "Login as Jobseeker"</div>
+
+
+		</li>
+		<li test-id='188' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iShouldSeeText(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I should see text "Create a jobseeker account"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@resetClientPasswordLink</span>
+						<span class='category-status right'>
+						<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+						<span class='label pass'>23</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 23</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@rejectClientLoginInvalid</span>
+						<span class='category-status right'>
+						<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@toggleCandidateLoginIcon</span>
+						<span class='category-status right'>
+						<span class='label pass'>6</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ReleaseRegression2</span>
+						<span class='category-status right'>
+						<span class='label pass'>11</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 11</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ClientLogin</span>
+						<span class='category-status right'>
+						<span class='label pass'>23</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 23</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Web</span>
+						<span class='category-status right'>
+						<span class='label pass'>23</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 23</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Recruiters</span>
+						<span class='category-status right'>
+						<span class='label pass'>23</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 23</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@WeAreTestingParallel</span>
+						<span class='category-status right'>
+						<span class='label pass'>23</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 23</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:26 pm</td>
+										<td class='linked' test-id='2'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:31:49 pm</td>
+										<td class='linked' test-id='6'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:00 pm</td>
+										<td class='linked' test-id='9'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:23 pm</td>
+										<td class='linked' test-id='18'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:36 pm</td>
+										<td class='linked' test-id='24'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:05 pm</td>
+										<td class='linked' test-id='40'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:19 pm</td>
+										<td class='linked' test-id='43'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:35 pm</td>
+										<td class='linked' test-id='57'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:45 pm</td>
+										<td class='linked' test-id='64'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:33:58 pm</td>
+										<td class='linked' test-id='75'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:08 pm</td>
+										<td class='linked' test-id='81'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:17 pm</td>
+										<td class='linked' test-id='90'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:51 pm</td>
+										<td class='linked' test-id='113'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:05 pm</td>
+										<td class='linked' test-id='116'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='136'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:39 pm</td>
+										<td class='linked' test-id='147'>Reset Client Password link</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:38:53 pm</td>
+										<td class='linked' test-id='149'>Reject Client Login with invalid credentials</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:11 pm</td>
+										<td class='linked' test-id='166'>toggle the candidate login icon</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ClientE2E</span>
+						<span class='category-status right'>
+						<span class='label pass'>5</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@clientSuccessfulLogin</span>
+						<span class='category-status right'>
+						<span class='label pass'>5</span>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:31:37 pm</td>
+										<td class='linked' test-id='4'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:13 pm</td>
+										<td class='linked' test-id='11'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:32:55 pm</td>
+										<td class='linked' test-id='30'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:34 pm</td>
+										<td class='linked' test-id='96'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:34:45 pm</td>
+										<td class='linked' test-id='110'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:35:16 pm</td>
+										<td class='linked' test-id='123'>Successfully Login as an existing Client</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchSessionException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2023 06:38:20 pm</td>
+										<td class='linked' test-id='135'>Given I login as a client</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, get {url=https://www-master.ci.resume-library.com/hiring/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50932}, goog:loggingPrefs: {browser: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, performance: false, platformName: WINDOWS, proxy: Proxy(), se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, video: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at com.resumelibrary.utilities.Utility.getDriverWithUrl(Utility.java:46)
+	at com.resumelibrary.utilities.Utility.loadWebUrl(Utility.java:67)
+	at com.resumelibrary.webtest.misc.MiscPage.loginAsClient(MiscPage.java:306)
+	at com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient(Misc.java:93)
+	at ✽.I login as a client(file:///Users/surendran/Downloads/CVL-WEB-REPO-master2_baseline/./src/test/java/resources/featurefiles/web/client/login/Login.feature:171)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>May 19, 2023 06:39:10 pm</td>
+										<td class='linked' test-id='164'>com.resumelibrary.cucumber.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.1', java.version: '19.0.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, get {url=https://www-master.ci.resume-library.com/hiring/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ltuser\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50932}, goog:loggingPrefs: {browser: ALL}, networkConnectionEnabled: false, pageLoadStrategy: normal, performance: false, platformName: WINDOWS, proxy: Proxy(), se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, video: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:310)
+	at com.resumelibrary.utilities.Utility.getDriverWithUrl(Utility.java:46)
+	at com.resumelibrary.utilities.Utility.loadWebUrl(Utility.java:67)
+	at com.resumelibrary.webtest.misc.MiscPage.loginAsClient(MiscPage.java:306)
+	at com.resumelibrary.cucumber.stepdefinitions.web.misc.Misc.iLoginAsAClient(Misc.java:93)
+	at ✽.I login as a client(file:///Users/surendran/Downloads/CVL-WEB-REPO-master2_baseline/./src/test/java/resources/featurefiles/web/client/login/Login.feature:171)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>24</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>121</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 19, 2023 06:31:24 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 19, 2023 06:39:51 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 08 26.470</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@resetClientPasswordLink</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>23</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									95.833%
+							</td>
+						</tr>
+						<tr>
+							<td>@rejectClientLoginInvalid</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@toggleCandidateLoginIcon</td>
+							<td>6</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@ReleaseRegression2</td>
+							<td>11</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									91.667%
+							</td>
+						</tr>
+						<tr>
+							<td>@ClientLogin</td>
+							<td>23</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									95.833%
+							</td>
+						</tr>
+						<tr>
+							<td>@Web</td>
+							<td>23</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									95.833%
+							</td>
+						</tr>
+						<tr>
+							<td>@Recruiters</td>
+							<td>23</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									95.833%
+							</td>
+						</tr>
+						<tr>
+							<td>@WeAreTestingParallel</td>
+							<td>23</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									95.833%
+							</td>
+						</tr>
+						<tr>
+							<td>@ClientE2E</td>
+							<td>5</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									83.333%
+							</td>
+						</tr>
+						<tr>
+							<td>@clientSuccessfulLogin</td>
+							<td>5</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									83.333%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 0,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 24,
+				passChild: 23,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 121,
+				passGrandChild: 116,
+				failGrandChild: 2,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 3,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Client Login Login":504.056
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
